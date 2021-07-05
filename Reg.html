@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="regfm.css">
+    <style media="screen">
+
+    body{
+    overflow: scroll;
+    }
+    
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="kichwa">
+
+      <a href="index.html">
+      <button type="button" class="z1" onclick="">HOME</button>
+      </a>
+      <a href="Aboutme.html">
+      <button type="button" class="z1" onclick="">ABOUT ME</button>
+    </a>
+    <a href="Reg.html">
+      <button type="button" class="z1" onclick="">REGISTER</button>
+    </a>
+    <a href="log.html">
+      <button type="button" class="z1" onclick="">COURSES</button>
+    </a>
+    <a href="Ex2.html">
+      <button type="button" class="z1" onclick="">CV</button>
+    </a>
+    <a href="contacts.html">
+      <button type="button" class="z1" onclick="">CONTACTS</button>
+    </a>
+  </div><br><br>
+
+    <h1>REGISTRATION <br>FORM</h1><br>
+
+    <hr class="ln">
+
+    <div class="fm">
+        <h2>Please fill the following form</h2>
+
+      <form class="dem" name="form" action="connection.php" method="post" onsubmit="return(validate())">
+           <p>NAMES</p>
+              <div class="fem">
+<table class="tb">
+
+  <tr>
+    <td>
+      First Name:
+    </td>
+    <td>
+      <input type="text" name="fname" value="" class="in">
+    </td>
+    <td>
+        Middle Name:
+    </td>
+    <td>
+      <input type="text" name="mname" value="" class="in">
+    </td>
+    <tr>
+    <td>
+    Last Name:
+    </td>
+    <td>
+      <input type="text" name="lname" value="" class="in">
+    </td>
+    <td>
+      User Name:
+    </td>
+    <td>
+      <input type="text" name="uname" value="" class="in">
+    </td></tr>
+            </table></div>
+
+
+             <p>PASSWORD</p>
+              <div class="h">
+                <table class="tb">
+                  <tr>
+                    <td>
+                      Password:
+                    </td>
+                    <td>
+                      <input type="password" name="val1" value="" class="in">
+                    </td>
+                    <td>
+                      Confirm Password:
+                    </td>
+                    <td>
+                        <input type="password" name="val2" value="" class="in">
+                    </td>
+
+                  </tr></table>
+            </div><br>
+
+            <p>CV</p><br>
+            <div class="j">
+              <label for="CV">
+            Upload your CV in pdf format <input type="file" name="cv" value="" accept=".pdf">
+
+
+              </label>
+            </div><br>
+
+            <p>CONCTACTS</p>
+            <div class="k">
+<table  class="tb">
+<tr>
+  <td>
+    Email:
+    </td>
+    <td>
+      <input type="Email" name="email" value="" class="in" >
+      </td>
+      <td>
+        Phone Number:
+      </td>
+      <td>
+        <input type="text" name="pnumber" value="" class="in" placeholder="eg +255-78672-2645">
+      </td>
+  </tr>
+    <tr>
+      <td>
+        Facebook:
+      </td>
+      <td>
+        <input type="text" name="fb" value="" class="in"  required placeholder="Username">
+      </td>
+      <td>
+          Twitter :
+      </td>
+      <td>
+        <input type="text" name="tw" value="" class="in"  required placeholder="Username">
+      </td>
+      <tr>
+      <td>
+        Instagram:
+      </td>
+      <td>
+        <input type="text" name="ig" value="" class="in"  required placeholder="Username">
+      </td>
+
+      </tr>
+            </table></div>
+            <div class="b">
+              <input type="submit" name="submit" class="s" value="SUBMIT">
+              <input type="reset"  name="reset" class="s" value="RESET">
+            </div>
+      </form>
+    </div>
+
+
+    <script type = "text/javascript">
+
+       // UUUUwiiii hhahahhaha eti ndo Form validation.
+       function validate() {
+	 if( form.fname.value == "" ) {
+             alert( "Please write your firstname!" );
+             document.form.fname.focus();
+             return false;
+          }
+
+ 		 var regex = /^[a-zA-Z]+$/;
+ 			if(regex.test(form.fname.value) == false){
+ 		    alert("Firstname must be in alphabets only");
+ 		    document.form.fname.focus()
+ 		    return false;
+ 		 }
+
+     if( form.mname.value == "" ) {
+            alert( "Please write your Middle name!" );
+            document.form.mname.focus();
+            return false;
+         }
+
+     var regex = /^[a-zA-Z]+$/;
+     if(regex.test(form.mname.value) == false){
+       alert("Middle Name must be in alphabets only");
+       document.form.mname.focus()
+       return false;
+     }
+
+
+ 		 if( form.lname.value == "" ) {
+             alert( "Please provide your Last Name!" );
+             document.form.lname.focus() ;
+             return false;
+          }
+ 		 if(regex.test(form.lname.value) == false){
+ 		    alert("Lastname must be in alphabets only");
+ 		    document.form.lname.focus()
+ 		    return false;
+ 		 }
+
+
+
+     if( form.uname.value == "" ) {
+            alert( "Please write your User Name!" );
+            document.form.uname.focus();
+            return false;
+         }
+
+    var regex = /^[a-zA-Z]+$/;
+     if(regex.test(form.uname.value) == false){
+       alert("User Name must be in alphabets only");
+       document.form.uname.focus()
+       return false;
+    }
+
+//PASSWORD VALIDATION HAHAHAHAHAHA:
+
+    var psw= form.val1.value;
+    var psw1= form.val2.value;
+
+
+
+    if (psw === ""){
+      alert("Password field must not stay empty");
+      document.form.val1.focus();
+      return false;
+    }
+
+
+    if (psw1 == ""){
+      alert("You must confirm your password");
+      document.form.val2.focus();
+      return false;
+    }
+
+    if (psw.length <= 10 ){
+      alert("Password lenght must be atleast 11 characters");
+      document.form.val1.focus();
+      return false;
+    }
+
+    if (psw.length >= 20){
+      alert("Password lenght must not exceed 20 characters");
+      document.form.val1.focus();
+      return false;
+    }
+
+
+    /*var lettr=/[a-zA-Z]/;*/
+    var numb=/(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*()_+=])(?=.*[\s])/;
+    if (numb.test(psw)== false){
+        alert ("Password must be alphanumeric including the use of space key and special characters");
+        document.form.val1.focus();
+        return false;
+    }
+
+    if (psw !== psw1){
+      alert("Password don't match");
+      document.form.val2.focus();
+      return false;
+    }
+
+    if (document.form.cv.value == ""){
+      alert("Upload your CV in pdf");
+      document.form.cv.focus();
+      return false;
+    }
+
+
+          if( document.form.email.value == "" ) {
+             alert( "Please provide your Email!" );
+             document.form.email.focus() ;
+             return false;
+          }
+
+          var pb=form.pnumber.value;
+
+          if( pb == "" ) {
+             alert( "Please provide your phone Number");
+             document.form.pnumber.focus();
+             return false;
+          }
+
+        var pho = /^\+?([0-9]{3})\)?[-. ]?([0-9]{5})[-. ]?([0-9]{4})$/;
+         if(pho.test(pb)==false){
+              alert("Yoh! follow instruction given from placeholder");
+              document.form.pnumber.focus();
+              return false;
+
+              }
+
+
+          if( document.form.email.value == "" ) {
+             alert( "Please provide your Email!" );
+             document.form.email.focus() ;
+             return false;
+          }
+
+          if( document.form.fb.value == "" ) {
+             alert( "Insert facebook user name" );
+             document.form.fb.focus() ;
+             return false;
+          }
+
+          if( document.form.tw.value == "" ) {
+             alert( "Insert tweeter username" );
+             document.form.tw.focus() ;
+             return false;
+          }
+
+          if( document.form.ig.value == "" ) {
+             alert( "Insert Instagram username" );
+             document.form.ig.focus() ;
+             return false;
+          }
+
+          return( true );
+       }
+
+
+ </script>
+
+
+
+</body>
+
+</html>
