@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Couresz</title>
+    <style media="screen">
+
+      body{
+        background-color: black;
+        color:white;
+      }
+      h1{
+        color:red;
+      }
+      th{
+        font-size: 15pt;
+      }
+      .bn{
+        font-size: 13pt;
+        font-weight: bold;
+        border-radius:7px;
+        border-style: solid;
+        border-color: red;
+        border-width: 3px;
+        margin: 10px;
+        transition: background-color 1s, color 1s;
+
+      }
+
+      .bn:hover{
+        background-color: black;
+        color:white;
+      }
+      .cs{
+        background-color: red;
+        color: red;
+        width:50%;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+
+      }
+      .cx{
+        background-color: red;
+        color: red;
+        width:50%;
+
+      }
+      .cp{
+        background-color: red;
+        color: red;
+        width:50%;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+
+
+      }
+      .spc{
+        margin-left: 35%;
+      }
+    </style>
+
+
+
+  </head>
+  <body>
+
+
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="">
+        <title>Curse Menu</title>
+        <link rel="stylesheet" href="cozez.css">
+      </head>
+      <body>
+
+        <h1>COURSE INFORMATION</h1>
+
+        <hr class="ln"><br><br>
+        <form class="" action="courses.php" name="form" method="POST" onsubmit="return(validate());">
+
+            <table class="tb" >
+              <tr>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Offering Department</th>
+                <th>Semester offered</th>
+                <th>Accademic Year</th>
+                <th>Course Instructor</th>
+                <th>Grade Results</th>
+              </tr>
+              <tr>
+                <td><input type="text"  name="coursename"   class="tx"></td>
+                <td><input type="text"  name="coursecode" class="txt"></td>
+                <td><input type="text"  name="department" class="tx"></td>
+
+                <td>
+                      <select  class="vx" name="semester">
+                        <option value=""></option>
+                        <option value="Semester 1">Semester 1</option>
+                    <option value="Semester 2">Semester 2</option>
+                  </select>
+                </td>
+                <td>
+                    <select class="vx" name="year">
+                    <option value=""></option>
+                    <option value="year 1">Year one</option>
+                    <option value="year 2">Year two</option>
+                    <option value="year 3">Year three</option>
+                    <option value="year 4">Year four</option>
+                    <option value="year 5">Year five</option>
+
+
+                </td>
+                <td><input type="text" name="teacher" class="tx" ></td>
+                <td>
+            <!--      <input type="text" name="grade" class="txt">-->
+                    <select class="tx" name="grade" >
+                      <option value=""></option>
+                      <option value="A">A</option>
+                      <option value="B+">B+</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                      <option value="D">D</option>
+                    </select>
+
+                </td>
+              </tr>
+            </table><br>
+              <table class="tb">
+              <tr>
+                <th>Course Discription</th>
+              </tr>
+              <td>
+                  <textarea rows="5" cols="70" name="description" class="tx" >
+                  </textarea><br>
+              </td>
+            </table><br><br><br>
+            <div class="spc">
+            <div class="cs">
+              <p>..</p></div>
+              <div class="cx">
+                <p>..</p></div>
+                <div class="cp">
+                  <p>..</p>
+
+            </div>
+          </div>
+            <input type="submit" name="" value="SUBMIT" class="bn"><br><br>
+
+            <a href="display.php">
+              <input type="button" name="" value="PREVIEW DATA" class="bn">
+
+            </a>
+            <a href="logout.php">
+            <input type="button" name="" value="LOG OUT" class="bn" >
+
+          </a>
+          </form>
+
+
+
+          <script type="text/javascript">
+
+            function validate(){
+              var cz=document.form.coursename.value;
+
+              if (cz==""){
+                alert("Coursename must not stay empty");
+                document.form.coursename.focus();
+                return false;
+              }
+
+              var regx=/^[a-zA-Z]+$/;
+              if (regx.test(cz)==false){
+                alert("Only Alphabets are required");
+                document.form.coursename.focus();
+                return false;
+              }
+
+              var cd=document.form.coursecode.value;
+
+              if (cd==""){
+                alert("Course code is required");
+                document.form.coursecode.focus();
+                return false;
+              }
+
+              var regwx=/[A-Z][\s][0-9]/;
+              if (regwx.test(cd)==false){
+                alert("Provide key letter and code eg CS 181");
+                alert("Remember letters must be alphabets");
+                document.form.coursecode.focus();
+                return false;
+              }
+
+
+              var dp=document.form.department.value;
+
+              if (dp==""){
+                alert("Offering department is required");
+                document.form.department.focus();
+                return false;
+              }
+
+              var regx=/^[a-zA-Z]+$/;
+              if(regx.test(dp)==false){
+                alert("Use alphabets only to describe a department");
+                document.form.department.focus();
+                return false;
+              }
+
+              var sm=document.form.semester.value;
+
+              if(sm==""){
+                alert(" Semester Must be selected");
+                document.form.semester.focus() ;
+                return false;
+              }
+
+              var yr=document.form.year.value;
+
+              if(yr==""){
+                alert("Year Must be selected");
+                document.form.year.focus();
+                return false;
+              }
+
+              var tc=document.form.teacher.value;
+              if(tc==""){
+                alert("You must aknowledge your Instructor");
+                document.form.teacher.focus();
+                return false;
+              }
+
+              var regx=/^[a-zA-Z]+$/;
+              if(regx.test(tc)==false){
+                alert("Remember use alphabets only in naming Instructor");
+                document.form.teacher.focus();
+                return false;
+              }
+
+              var grad=document.form.grade.value;
+
+              if(grad==""){
+                alert("Grade field must not stay empty");
+                document.form.grade.focus();
+                return false;
+              }
+
+              var dexs=document.form.description.value;
+
+              if( dexs.value ==""){
+                alert("description must be filled");
+                document.form.description.focus();
+                return false;
+              }
+
+        /*      if( dexs.length >= 50 ){
+                alert("characters must not exeed 50 characters");
+                document.form.description.focus();
+                return false;
+              }*/
+
+
+
+
+
+            }
+
+          </script>
+
+
+
+
+  </body>
+</html>

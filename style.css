@@ -1,0 +1,113 @@
+
+
+
+
+.kichwa{
+  display: inline-flex;
+  border-top-style: double;
+  border-bottom-style: double;
+  border-width: 6px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: white;
+  border-color: red red orange orange;
+  margin-left: 25%;
+}
+.z1{
+  border-radius:7px;
+  border: none;
+  padding: 1px;
+  margin:10px;
+  color:black;
+  background-color: dodgerblue;
+  width:100px;
+  height: 40px;
+  font-size: 12pt;
+  font-weight: bold;
+  border-color: red;
+  border-width:3px ;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 0px white;
+  transition: width 1s, background-color 2s, height 1s,font-size 1s,border-width 1s,box-shadow 1s;
+}
+
+.z1:hover{
+  box-shadow: 0px 0px 4px 6px white;
+  font-size: 18pt;
+  height: 50px;
+  width: 150px;
+  background-color: green;
+  background-color: yellow;
+  background-color: red;
+  border-width: 7px;
+
+}
+
+img{
+  width:300px;
+  margin-left: 230%;
+  margin-top: 99%;
+  height: auto;
+  opacity: 0.8;
+  /*border-left-style: double;
+  border-top-left-radius:100px;
+  border-bottom-left-radius:100px;
+  border-width: 20px;
+  border-color: #0F0;*/
+}
+
+h1{
+  color:dodgerblue;
+  font-size: 45pt;
+}
+
+
+.mk{
+  display: inline-flex;
+  color:dodgerblue;
+}
+
+
+.fn{
+  font-size: 70pt;
+  margin-left: 25px;
+  color:dodgerblue;
+  transition: color 1s;
+}
+.fn:hover{
+  color:white;
+}
+
+.tv{
+  font-size:44pt;
+  margin-right: 40px;
+  color:dodgerblue;
+  transition: color 1s;
+}
+.tv:hover{
+  color: white;
+}
+
+.ex{
+  font-size: 60pt;
+  margin-left: 25px;
+  color:dodgerblue;
+  transition: color 1s;
+}
+.ex:hover{
+  color:white;
+}
+
+.an{
+  font-size: 34pt;
+  color:red;
+  margin-left: 20px;
+  text-shadow: 0px 0px 3px 0px white;
+  transition: color 1s,text-shadow 1s;
+}
+.an:hover{
+  color:orange;
+  text-shadow: 0px 0px 4px 60px white;
+}

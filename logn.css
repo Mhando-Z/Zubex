@@ -1,0 +1,50 @@
+body{
+  background-color: black;
+  overflow: hidden;
+
+}
+
+.cnt{
+  margin-left: 35%;
+  margin-right: 30%;
+  margin-top: 10%;
+  margin-bottom: 22%;
+  color:white;
+  cursor: pointer;
+  border: 3px;
+  width: 450px;
+  border-top-style: double;
+  border-bottom-style: double;
+ border-width: 10px;
+ border-bottom-right-radius: 20px;
+ border-bottom-left-radius:  20px;
+ border-top-right-radius: 20px;
+ border-top-left-radius: 20px;
+ text-align: center;
+ font-size: 20pt;
+ box-shadow: 0px 0px 2px 2px orange;
+}
+.color{
+  background-color: red;
+  color: red;
+}
+
+.tx{
+  border-radius: 10px;
+  font-size: 15pt;
+  text-align: center;
+  font-weight: bold;
+
+}
+.b{
+  background-color: red;
+  border: 0px;
+  cursor: pointer;
+  font-size: 13pt;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 1s;
+}
+.b:hover{
+  background-color: dodgerblue;
+}
